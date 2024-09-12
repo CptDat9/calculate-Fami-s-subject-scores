@@ -1,6 +1,5 @@
 import math
 def tinh_DHP(KT1, KT2, TP, DTCK):
-# Tính ĐKTĐK
     DKTDK = 1 / 3 * (KT1 + KT2) + round(TP * 2) / 2  # Làm tròn TP đến 0.5
 
 # Tính ĐQT
@@ -8,10 +7,8 @@ def tinh_DHP(KT1, KT2, TP, DTCK):
     print(f"Điểm quá trình (ĐQT) = {DQT}; theo quy tắc làm tròn thì ĐQT = {round(DQT*2)/2}")
 
 
-# Tính ĐHP
     DHP = 0.5 * (round(DQT*2)/2 + round(DTCK * 2) / 2)  # Làm tròn DTCK đến 0.5
 
-# Kiểm tra điều kiện trượt môn
     if DHP < 4:
         print("Bạn đã trượt môn do ĐHP < 4")
         print(f"ĐHP của bạn = {DHP}")
@@ -26,7 +23,6 @@ def nhap_so(message, data_type=float):
         except ValueError:
             print("Vui lòng nhập một số hợp lệ.")
 
-# Nhập dữ liệu từ người dùng
 KT1 = nhap_so("Nhập điểm KT1 (0 đến 15): ", int)
 if not (0 <= KT1 <= 15):
     print("Điểm nhập vào không hợp lệ. Vui lòng kiểm tra lại.")
